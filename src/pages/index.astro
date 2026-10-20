@@ -1,16 +1,163 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const resources = [
+  {
+    title: "About",
+    description:
+      "Learn about the project, its purpose, philosophy and design goals.",
+    href: "/about/",
+  },
+  {
+    title: "Security",
+    description:
+      "Explore the principles behind application permissions and user authorization.",
+    href: "/security/",
+  },
+  {
+    title: "Development",
+    description:
+      "Follow the project's architecture, progress and technical decisions.",
+    href: "/development/",
+  },
+  {
+    title: "Releases",
+    description:
+      "Find release information as the project evolves.",
+    href: "/releases/",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <div class="breadcrumb">
+    <a href="/">Index</a>
+  </div>
+
+  <section class="welcome">
+    <p class="eyebrow">THE Y.ORG PROJECT</p>
+
+    <h1>Welcome to Y.Org</h1>
+
+    <p class="lead">
+      A window system project exploring a more secure and
+      user-controlled graphical environment.
+    </p>
+
+    <p>
+      Y.Org (pronounced "Yorg") is an open-source project focused on the fundamentals of graphical environments for Linux and Unix-like systems.
+    </p>
+
+    <div class="welcome-links">
+      <a class="primary-link" href="https://github.com/The-Y-Org-Project/Y.Org">
+        Explore the project <span aria-hidden="true">→</span>
+      </a>
+      <a href="https://github.com/The-Y-Org-Project/Website">Website Source</a>
+    </div>
+  </section>
+
+  <div class="content-layout">
+    <article class="main-content">
+      <section id="about" class="content-section">
+        <h2>About the project</h2>
+
+        <p>
+          The graphical environment is a fundamental part of a
+          desktop operating system. Y.Org aims to investigate
+          alternative approaches to its architecture, with
+          particular attention to security, transparency and
+          user control.
+        </p>
+
+        <p><a href="/about/">Explore the about page →</a></p>
+      </section>
+
+      <section id="security" class="content-section">
+        <h2>Security and permissions</h2>
+
+        <p>
+          Applications should not automatically receive every
+          capability simply because they are running inside a
+          graphical session. Y.Org explores a model in which
+          access to sensitive graphical operations can be
+          mediated by explicit user authorization.
+        </p>
+
+        <p><a href="/security/">Explore the security page →</a></p>
+      </section>
+
+      <section id="development" class="content-section">
+        <h2>Development</h2>
+
+        <p>
+          Y.Org is an evolving open-source project. Technical
+          details and implementation status will be published
+          as development progresses.
+        </p>
+
+        <p>
+          Source code, contribution guidelines and release
+          information can be linked here when the corresponding
+          project resources are available.
+        </p>
+
+        <p><a href="/development/">Explore the development page →</a></p>
+      </section>
+
+      <section id="releases" class="content-section">
+        <h2>Releases and version lifecycle</h2>
+
+        <p>
+          Y.Org uses a progress-based model to describe the
+          lifecycle of each version. The progress bar ranges
+          from 0% at the beginning of development to 100% when
+          the version reaches the end of its regular lifecycle.
+        </p>
+
+        <p>
+          Long-Term Support (LTS) versions can extend this
+          lifecycle to 150%. The additional 50% is reserved
+          exclusively for bug fixes and security updates.
+          No new features will be introduced during this
+          extended support period.
+        </p>
+
+        <p>
+          This model distinguishes regular development and
+          maintenance from the extended support provided
+          by LTS releases.
+        </p>
+
+        <p><a href="/releases/">Explore the releases page →</a></p>
+      </section>
+    </article>
+
+    <aside class="sidebar" aria-label="Project information">
+      <h2>Project resources</h2>
+
+      {resources.map((resource) => (
+        <div class="resource">
+          <h3><a href={resource.href}>{resource.title}</a></h3>
+          <p>{resource.description}</p>
+        </div>
+      ))}
+
+      <div class="sidebar-status">
+        <span class="status-indicator" aria-hidden="true"></span>
+        <span>Active Project</span>
+      </div>
+    </aside>
+  </div>
+
+  <section class="project-notice">
+    <strong>About this website</strong>
+    <p>
+      This website is the official website of{" "}
+      <a
+        href="https://github.com/The-Y-Org-Project"
+        target="_blank"
+        rel="noopener noreferrer"
+      >The Y.Org Project</a>.
+    </p>
+  </section>
+</BaseLayout>

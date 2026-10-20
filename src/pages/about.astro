@@ -1,0 +1,262 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About — Y.Org"
+  description="Learn about Y.Org, its vision, design principles and goals."
+>
+  <div class="breadcrumb">
+    <a href="/">Index</a>
+    <span aria-hidden="true">/</span>
+    <span>About</span>
+  </div>
+
+  <header class="about-header">
+    <h1>About Y.Org</h1>
+
+    <p class="lead">
+      Y.Org is a project exploring the evolution of the
+      classic X.Org window system, with a focus on security,
+      transparency and user control.
+    </p>
+  </header>
+
+  <article class="about-content">
+    <section>
+      <h2>What is Y.Org?</h2>
+
+      <p>
+        Y.Org is an open-source project focused on the
+        foundations of graphical environments for Linux and
+        other Unix-like operating systems.
+      </p>
+
+      <p>
+        The project aims to investigate a different approach
+        to window system design, reconsidering how applications
+        interact with the graphical environment and how those
+        interactions can be managed securely.
+      </p>
+    </section>
+
+    <section>
+      <h2>From X.Org to Y.Org</h2>
+
+      <p>
+        X.Org has played an important role in the history of
+        graphical environments on Unix-like systems. Y.Org
+        takes inspiration from this legacy while exploring
+        alternative architectural ideas for the future.
+      </p>
+
+      <p>
+        Y.Org is not intended to be presented as a finished
+        replacement for X.Org. Compatibility, migration and
+        integration with existing graphical software require
+        further research and design.
+      </p>
+    </section>
+
+    <section>
+      <h2>Why Y.Org?</h2>
+
+      <p>
+        Graphical applications need access to shared resources
+        to provide a useful desktop experience. However, that
+        access should not automatically imply unrestricted
+        control over the graphical session.
+      </p>
+
+      <p>
+        Y.Org explores whether clearer permission boundaries
+        and explicit user authorization can improve security
+        without sacrificing usability.
+      </p>
+    </section>
+
+    <section>
+      <h2>Design principles</h2>
+
+      <div class="principle">
+        <h3>User control</h3>
+        <p>
+          Users should have meaningful control over sensitive
+          operations performed within their graphical session.
+        </p>
+      </div>
+
+      <div class="principle">
+        <h3>Security by design</h3>
+        <p>
+          Security should be considered from the beginning of
+          the architecture, rather than added as an afterthought.
+        </p>
+      </div>
+
+      <div class="principle">
+        <h3>Transparency</h3>
+        <p>
+          The system's behavior, permission model and technical
+          decisions should be documented clearly.
+        </p>
+      </div>
+
+      <div class="principle">
+        <h3>Open development</h3>
+        <p>
+          The project aims to make its source code, development
+          process and design discussions accessible to the
+          open-source community.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technology</h2>
+
+      <p>
+        Y.Org will be developed primarily using Rust and Vulkan.
+        Rust will serve as the main implementation language,
+        while Vulkan will be used for graphics-related work.
+      </p>
+
+      <p>
+        These technologies are intended to support a system
+        designed with security, performance, reliability and
+        user control in mind. The exact architecture and the
+        responsibilities of each component will be defined
+        throughout development.
+      </p>
+
+      <p>
+        Y.Org is still in its early stages, and its technical
+        design may evolve as the project progresses.
+      </p>
+    </section>
+
+    <section>
+      <h2>Philosophy</h2>
+
+      <p>
+        The philosophy of Y.Org is simple: the user should
+        remain in control of the system, and that includes
+        the applications running within it.
+      </p>
+
+      <p>
+        A graphical environment should serve its user rather
+        than give applications unrestricted authority over
+        the session. Applications should have access to the
+        resources they need to operate, but that access should
+        respect the user's authority and the system's security
+        boundaries.
+      </p>
+
+      <p>
+        Y.Org aims to explore a model in which sensitive
+        graphical operations can be governed by clear
+        permissions and explicit user authorization. Users
+        should be able to understand what an application is
+        requesting and make informed decisions about granting
+        access.
+      </p>
+
+      <p>
+        Security should not mean taking control away from the
+        user. Instead, it should help protect the user's
+        freedom to decide how their own system behaves.
+      </p>
+
+      <p>
+        Ultimately, Y.Org is guided by the principle that
+        the computer belongs to its user. The system should
+        enforce its security rules transparently while
+        keeping the user, rather than individual applications,
+        at the center of control.
+      </p>
+    </section>
+
+    <section>
+      <h2>Current status</h2>
+
+      <p>
+        Y.Org is in an early stage of development. Its
+        architecture and design are still evolving, and the
+        ideas described on this website should be understood
+        as project goals rather than completed features.
+      </p>
+
+      <p>
+        Follow the project's progress on the{" "}
+        <a href="/development/">Development</a> page or explore
+        its source code on{" "}
+        <a
+          href="https://github.com/The-Y-Org-Project/Y.Org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>.
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .about-header {
+    padding: 20px 0 25px;
+    border-bottom: 1px solid #c8ccd1;
+    margin-bottom: 28px;
+  }
+
+  .about-header .lead {
+    max-width: 790px;
+    color: #54595d;
+    font-family: "Gelasio", Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.55;
+  }
+
+  .about-content {
+    max-width: 850px;
+  }
+
+  .about-content section {
+    margin-bottom: 30px;
+  }
+
+  .about-content h2 {
+    margin-bottom: 12px;
+  }
+
+  .about-content p {
+    margin-bottom: 13px;
+    line-height: 1.7;
+  }
+
+  .principle {
+    padding: 12px 0;
+    border-bottom: 1px solid #eaecf0;
+  }
+
+  .principle:last-child {
+    border-bottom: 0;
+  }
+
+  .principle h3 {
+    margin: 0 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .principle p {
+    margin: 0;
+    color: #54595d;
+  }
+
+  @media (max-width: 600px) {
+    .about-header .lead {
+      font-size: 17px;
+    }
+  }
+</style>

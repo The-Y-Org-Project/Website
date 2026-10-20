@@ -1,0 +1,31 @@
+---
+const navigation = [
+  { label: "Index", href: "/" },
+  { label: "About", href: "/about/" },
+  { label: "Security", href: "/security/" },
+  { label: "Development", href: "/development/" },
+  { label: "Releases", href: "/releases/" },
+];
+---
+
+<header class="top-panel">
+  <div class="panel-inner">
+    <a class="brand" href="/" aria-label="Y.Org home">
+      <img
+        class="brand-logo"
+        src="/image/yorg/Y.Org-full.png"
+        alt="Y.Org — The Y Window System"
+        width="120"
+        height="71"
+      />
+    </a>
+
+    <nav class="top-nav" aria-label="Main navigation">
+      {navigation.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+  </div>
+
+  <div class="panel-highlight" aria-hidden="true"></div>
+</header>
