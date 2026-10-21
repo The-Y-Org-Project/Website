@@ -5,25 +5,25 @@ const resources = [
   {
     title: "About",
     description:
-      "Learn about the project, its purpose, philosophy and design goals.",
+      "Discover the project's purpose, philosophy and architectural design.",
     href: "/about/",
   },
   {
     title: "Security",
     description:
-      "Explore the principles behind application permissions and user authorization.",
+      "Explore application permissions, access control and user authorization.",
     href: "/security/",
   },
   {
     title: "Development",
     description:
-      "Follow the project's architecture, progress and technical decisions.",
+      "Learn about the architecture, technologies and engineering behind Y.Org.",
     href: "/development/",
   },
   {
     title: "Releases",
     description:
-      "Find release information as the project evolves.",
+      "Explore version milestones, maintenance policies and long-term support.",
     href: "/releases/",
   },
 ];
@@ -40,19 +40,30 @@ const resources = [
     <h1>Welcome to Y.Org</h1>
 
     <p class="lead">
-      A window system project exploring a more secure and
-      user-controlled graphical environment.
+      A Wayland compositor written in Rust, focused on
+      security, application permissions and user control
+      in Linux graphical environments.
     </p>
 
     <p>
-      Y.Org (pronounced "Yorg") is an open-source project focused on the fundamentals of graphical environments for Linux and Unix-like systems.
+      Y.Org (pronounced "Yorg") is an open-source project
+      that provides a foundation for graphical sessions
+      on Linux. Its architecture emphasizes transparency,
+      security and a desktop experience in which users
+      retain meaningful control over their environment.
     </p>
 
     <div class="welcome-links">
-      <a class="primary-link" href="https://github.com/The-Y-Org-Project/Y.Org">
+      <a
+        class="primary-link"
+        href="https://github.com/The-Y-Org-Project/Y.Org"
+      >
         Explore the project <span aria-hidden="true">→</span>
       </a>
-      <a href="https://github.com/The-Y-Org-Project/Website">Website Source</a>
+
+      <a href="https://github.com/The-Y-Org-Project/Website">
+        Website Source
+      </a>
     </div>
   </section>
 
@@ -62,73 +73,119 @@ const resources = [
         <h2>About the project</h2>
 
         <p>
-          The graphical environment is a fundamental part of a
-          desktop operating system. Y.Org aims to investigate
-          alternative approaches to its architecture, with
-          particular attention to security, transparency and
-          user control.
+          The graphical environment is a fundamental part
+          of any desktop operating system. Y.Org provides
+          an alternative approach to graphical session
+          management, bringing together window composition,
+          application interaction and user control.
         </p>
 
-        <p><a href="/about/">Explore the about page →</a></p>
+        <p>
+          Written in Rust, Y.Org emphasizes reliability,
+          security and a clear architectural foundation.
+          It integrates these principles into the management
+          of graphical surfaces and the interactions between
+          applications and the desktop.
+        </p>
+
+        <p>
+          Y.Org is an independent open-source project
+          focused on building a transparent and
+          user-oriented graphical environment for Linux.
+        </p>
+
+        <p>
+          <a href="/about/">Explore the about page →</a>
+        </p>
       </section>
 
       <section id="security" class="content-section">
         <h2>Security and permissions</h2>
 
         <p>
-          Applications should not automatically receive every
-          capability simply because they are running inside a
-          graphical session. Y.Org explores a model in which
-          access to sensitive graphical operations can be
-          mediated by explicit user authorization.
+          Y.Org treats security as an important part of
+          graphical session management. Applications do
+          not automatically require unrestricted access
+          to every capability available in the desktop
+          environment.
         </p>
 
-        <p><a href="/security/">Explore the security page →</a></p>
+        <p>
+          Its security model focuses on access control
+          and explicit authorization for sensitive
+          operations, including screen capture, input
+          access and interactions that may expose private
+          information or affect the user's session.
+        </p>
+
+        <p>
+          By making access policies more transparent,
+          Y.Org gives users a clearer understanding of
+          application capabilities and the permissions
+          associated with their graphical session.
+        </p>
+
+        <p>
+          <a href="/security/">Explore the security page →</a>
+        </p>
       </section>
 
       <section id="development" class="content-section">
         <h2>Development</h2>
 
         <p>
-          Y.Org is an evolving open-source project. Technical
-          details and implementation status will be published
-          as development progresses.
+          Y.Org is developed in Rust, providing the
+          foundation for its compositor architecture
+          and graphical session management.
         </p>
 
         <p>
-          Source code, contribution guidelines and release
-          information can be linked here when the corresponding
-          project resources are available.
+          The project uses Vunkan as its graphics-rendering
+          technology, integrating rendering into its
+          broader graphical architecture.
         </p>
 
-        <p><a href="/development/">Explore the development page →</a></p>
+        <p>
+          Its development combines systems programming,
+          graphical composition and security-oriented
+          design. The source code and technical documentation
+          provide insight into the project's implementation
+          and architecture.
+        </p>
+
+        <p>
+          <a href="/development/">Explore the development page →</a>
+        </p>
       </section>
 
       <section id="releases" class="content-section">
         <h2>Releases and version lifecycle</h2>
 
         <p>
-          Y.Org uses a progress-based model to describe the
-          lifecycle of each version. The progress bar ranges
-          from 0% at the beginning of development to 100% when
-          the version reaches the end of its regular lifecycle.
+          Y.Org follows a progress-based version lifecycle.
+          Each version is tracked from 0% at the beginning
+          of its lifecycle to 100% at the end of its regular
+          support period.
         </p>
 
         <p>
-          Long-Term Support (LTS) versions can extend this
-          lifecycle to 150%. The additional 50% is reserved
-          exclusively for bug fixes and security updates.
-          No new features will be introduced during this
-          extended support period.
+          Long-Term Support (LTS) versions extend this
+          lifecycle to 150%. The additional 50% is dedicated
+          exclusively to maintenance, including bug fixes
+          and security updates. No new features are
+          introduced during this extended support period.
         </p>
 
         <p>
-          This model distinguishes regular development and
-          maintenance from the extended support provided
-          by LTS releases.
+          This approach separates regular development
+          and maintenance from extended support, providing
+          a clear distinction between feature development
+          and long-term stability.
         </p>
 
-        <p><a href="/releases/">Explore the releases page →</a></p>
+        <p>
+          <a href="/releases/">Explore the releases page →</a>
+        </p>
       </section>
     </article>
 
@@ -137,13 +194,20 @@ const resources = [
 
       {resources.map((resource) => (
         <div class="resource">
-          <h3><a href={resource.href}>{resource.title}</a></h3>
+          <h3>
+            <a href={resource.href}>{resource.title}</a>
+          </h3>
+
           <p>{resource.description}</p>
         </div>
       ))}
 
       <div class="sidebar-status">
-        <span class="status-indicator" aria-hidden="true"></span>
+        <span
+          class="status-indicator"
+          aria-hidden="true"
+        ></span>
+
         <span>Active Project</span>
       </div>
     </aside>
@@ -151,13 +215,16 @@ const resources = [
 
   <section class="project-notice">
     <strong>About this website</strong>
+
     <p>
-      This website is the official website of{" "}
+      This is the official website of{" "}
       <a
         href="https://github.com/The-Y-Org-Project"
         target="_blank"
         rel="noopener noreferrer"
-      >The Y.Org Project</a>.
+      >
+        The Y.Org Project
+      </a>.
     </p>
   </section>
 </BaseLayout>

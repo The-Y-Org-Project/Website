@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="About — Y.Org"
-  description="Learn about Y.Org, its vision, design principles and goals."
+  description="Learn about Y.Org, the Y Window System: its architecture, security principles and approach to user control."
 >
   <div class="breadcrumb">
     <a href="/">Index</a>
@@ -16,9 +16,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <h1>About Y.Org</h1>
 
     <p class="lead">
-      Y.Org is a project exploring the evolution of the
-      classic X.Org window system, with a focus on security,
-      transparency and user control.
+      Y.Org — The Y Window System — is a Linux graphical system
+      project built around Rust, Wayland and user control, with
+      a strong focus on security, transparency and application
+      permissions.
     </p>
   </header>
 
@@ -27,16 +28,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2>What is Y.Org?</h2>
 
       <p>
-        Y.Org is an open-source project focused on the
-        foundations of graphical environments for Linux and
-        other Unix-like operating systems.
+        Y.Org is an open-source project developing an approach
+        to graphical session management for Linux. It brings
+        together window management, graphical applications and
+        the components that make up a desktop session.
       </p>
 
       <p>
-        The project aims to investigate a different approach
-        to window system design, reconsidering how applications
-        interact with the graphical environment and how those
-        interactions can be managed securely.
+        Built around Wayland, Y.Org explores how a graphical
+        environment can provide a modern foundation for desktop
+        applications while keeping the user in control of
+        access to sensitive resources.
       </p>
     </section>
 
@@ -46,15 +48,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <p>
         X.Org has played an important role in the history of
         graphical environments on Unix-like systems. Y.Org
-        takes inspiration from this legacy while exploring
-        alternative architectural ideas for the future.
+        takes inspiration from this legacy while exploring a
+        different approach to architecture, security and the
+        relationship between applications and the desktop.
       </p>
 
       <p>
-        Y.Org is not intended to be presented as a finished
-        replacement for X.Org. Compatibility, migration and
-        integration with existing graphical software require
-        further research and design.
+        Y.Org is built around Wayland rather than being a direct
+        continuation of the X.Org server. Compatibility with
+        existing applications, integration with other desktop
+        components and migration paths are important
+        considerations in its development.
       </p>
     </section>
 
@@ -62,16 +66,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2>Why Y.Org?</h2>
 
       <p>
-        Graphical applications need access to shared resources
-        to provide a useful desktop experience. However, that
-        access should not automatically imply unrestricted
-        control over the graphical session.
+        Graphical applications rely on shared resources to
+        provide a useful desktop experience. However, access
+        to those resources should not automatically grant
+        unrestricted control over the user's graphical session.
       </p>
 
       <p>
-        Y.Org explores whether clearer permission boundaries
-        and explicit user authorization can improve security
-        without sacrificing usability.
+        Y.Org places application permissions and user
+        authorization at the center of its security approach.
+        Its design explores clearer boundaries around sensitive
+        operations, helping users understand and manage what
+        applications can access.
       </p>
     </section>
 
@@ -81,33 +87,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="principle">
         <h3>User control</h3>
         <p>
-          Users should have meaningful control over sensitive
-          operations performed within their graphical session.
+          The user remains at the center of the graphical
+          session, with meaningful control over sensitive
+          operations and application access.
         </p>
       </div>
 
       <div class="principle">
         <h3>Security by design</h3>
         <p>
-          Security should be considered from the beginning of
-          the architecture, rather than added as an afterthought.
+          Security is a core architectural consideration,
+          shaping how components interact and how access to
+          sensitive resources is handled.
         </p>
       </div>
 
       <div class="principle">
         <h3>Transparency</h3>
         <p>
-          The system's behavior, permission model and technical
-          decisions should be documented clearly.
+          System behavior, permission mechanisms and technical
+          decisions should be understandable and documented
+          clearly.
         </p>
       </div>
 
       <div class="principle">
         <h3>Open development</h3>
         <p>
-          The project aims to make its source code, development
-          process and design discussions accessible to the
-          open-source community.
+          Source code, development progress and design
+          discussions are part of an open-source project that
+          welcomes review and community participation.
         </p>
       </div>
     </section>
@@ -116,22 +125,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2>Technology</h2>
 
       <p>
-        Y.Org will be developed primarily using Rust and Vulkan.
-        Rust will serve as the main implementation language,
-        while Vulkan will be used for graphics-related work.
+        Y.Org is written in Rust and uses Wayland as the
+        protocol for communication between the compositor and
+        compatible clients. Rust provides the implementation
+        language, while Vulkan serves as the planned graphics
+        rendering technology.
       </p>
 
       <p>
-        These technologies are intended to support a system
-        designed with security, performance, reliability and
-        user control in mind. The exact architecture and the
-        responsibilities of each component will be defined
-        throughout development.
+        These technologies form the basis of Y.Org's technical
+        direction. The architecture connects graphical session
+        management with a design that prioritizes security,
+        reliability, performance and user control.
       </p>
 
       <p>
-        Y.Org is still in its early stages, and its technical
-        design may evolve as the project progresses.
+        The implementation continues to evolve as the project
+        develops. Specific capabilities depend on the
+        components that are implemented and integrated.
       </p>
     </section>
 
@@ -139,58 +150,56 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2>Philosophy</h2>
 
       <p>
-        The philosophy of Y.Org is simple: the user should
-        remain in control of the system, and that includes
-        the applications running within it.
+        The philosophy of Y.Org is simple: the computer belongs
+        to its user, and the graphical environment should
+        reflect that principle.
       </p>
 
       <p>
-        A graphical environment should serve its user rather
-        than give applications unrestricted authority over
-        the session. Applications should have access to the
-        resources they need to operate, but that access should
-        respect the user's authority and the system's security
-        boundaries.
+        Applications are an essential part of the desktop, but
+        they should not automatically receive unrestricted
+        authority over the session in which they run. Access
+        to sensitive resources should respect clear security
+        boundaries and the user's authority.
       </p>
 
       <p>
-        Y.Org aims to explore a model in which sensitive
-        graphical operations can be governed by clear
-        permissions and explicit user authorization. Users
-        should be able to understand what an application is
-        requesting and make informed decisions about granting
-        access.
+        Y.Org explores a model in which sensitive graphical
+        operations are governed by explicit permissions and
+        meaningful user authorization. Requests for access
+        should be understandable, allowing users to make
+        informed decisions about their own systems.
       </p>
 
       <p>
-        Security should not mean taking control away from the
-        user. Instead, it should help protect the user's
-        freedom to decide how their own system behaves.
+        Security should not come at the expense of user
+        freedom. Instead, it should protect the user's ability
+        to decide how their computer behaves while preventing
+        applications from gaining unnecessary privileges.
       </p>
 
       <p>
-        Ultimately, Y.Org is guided by the principle that
-        the computer belongs to its user. The system should
-        enforce its security rules transparently while
-        keeping the user, rather than individual applications,
-        at the center of control.
+        Ultimately, Y.Org puts the user at the center of the
+        graphical session. The system defines and enforces
+        security boundaries, while the user remains the
+        authority those protections are designed to serve.
       </p>
     </section>
 
     <section>
-      <h2>Current status</h2>
+      <h2>Project status</h2>
 
       <p>
-        Y.Org is in an early stage of development. Its
-        architecture and design are still evolving, and the
-        ideas described on this website should be understood
-        as project goals rather than completed features.
+        Y.Org is an evolving open-source project. Its
+        architecture and implementation develop alongside its
+        design principles, and the capabilities available in
+        each release depend on the current state of development.
       </p>
 
       <p>
-        Follow the project's progress on the{" "}
-        <a href="/development/">Development</a> page or explore
-        its source code on{" "}
+        Visit the <a href="/development/">Development</a> page
+        to learn more about the project's technical direction,
+        or explore the source code on
         <a
           href="https://github.com/The-Y-Org-Project/Y.Org"
           target="_blank"
